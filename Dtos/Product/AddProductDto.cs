@@ -12,5 +12,6 @@ namespace Products.Dtos.Product
         public float Price { get; set; } = 0;
         public string Image { get; set; } = "https://climate.onep.go.th/wp-content/uploads/2020/01/default-image-300x225.jpg"; // default image
         public Category Category { get; set; } = Category.Laptop;
+        public int Stock { get; set; } = 0;
     }
 }

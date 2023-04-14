@@ -110,6 +110,7 @@ namespace Products.Services.ProductService
             dbProduct.Price = updatedProduct.Price;
             dbProduct.Image = updatedProduct.Image;
             dbProduct.Category = updatedProduct.Category;
+            dbProduct.Stock = updatedProduct.Stock;
 
             serviceResponse.Data = _mapper.Map<GetProductDto>(dbProduct);
             serviceResponse.Message = $"Your product with id {updatedProduct.Id} was successfully updated";
