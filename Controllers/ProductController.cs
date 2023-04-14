@@ -75,5 +75,17 @@ namespace Products.Controllers
             return Ok(response);
         }
 
+        //GET list of all products
+        [HttpGet("Reviews/GetAll")]
+        public async Task<ActionResult<ServiceResponse<List<GetReviewDto>>>> GetReviews() //returns a list of products
+        {
+            var response = await _productService.GetAllReviews();
+            if (response.Data is null)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
+        }
+
     }
 }

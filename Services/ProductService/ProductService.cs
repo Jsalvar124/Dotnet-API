@@ -63,12 +63,21 @@ namespace Products.Services.ProductService
             }
             return serviceResponse;
         }
-
+        // LIST PRODUCTS
         public async Task<ServiceResponse<List<GetProductDto>>> GetAllProducts()
         {
             var serviceResponse = new ServiceResponse<List<GetProductDto>>();
             var dbProducts = await _context.Products.ToListAsync();
             serviceResponse.Data = dbProducts.Select(c => _mapper.Map<GetProductDto>(c)).ToList();
+            return serviceResponse;
+        }
+
+        //LIST REVIEWS
+        public async Task<ServiceResponse<List<GetReviewDto>>> GetAllReviews()
+        {
+            var serviceResponse = new ServiceResponse<List<GetReviewDto>>();
+            var dbReviews = await _context.Reviews.ToListAsync();
+            serviceResponse.Data = dbReviews.Select(c => _mapper.Map<GetReviewDto>(c)).ToList();
             return serviceResponse;
         }
 

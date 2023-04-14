@@ -11,6 +11,8 @@ namespace Products
         {
             CreateMap<Product, GetProductDto>();
             CreateMap<AddProductDto, Product>();
+            CreateMap<Review, GetReviewDto>();
+
 
         }
     }

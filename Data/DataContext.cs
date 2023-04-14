@@ -14,5 +14,6 @@ namespace Products.Data
         }
 
         public DbSet<Product> Products => Set<Product>();
+        public DbSet<Review> Reviews => Set<Review>();
     }
 }

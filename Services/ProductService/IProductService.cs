@@ -14,6 +14,10 @@ namespace Products.Services.ProductService
         Task<ServiceResponse<GetProductDto>> UpdateProduct(UpdateProductDto updatedProduct);
         Task<ServiceResponse<List<GetProductDto>>> DeleteProductById(int id);
 
+
+        //Reviews
+        Task<ServiceResponse<List<GetReviewDto>>> GetAllReviews(); //TODO Añadir Review DTO
+
     
     }
 }
